@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap");
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@theme {
+  --font-josefin: "Josefin Sans", sans-serif;
+
+  --color-gradient-1: hsl(192, 100%, 67%);
+  --color-gradient-2: hsl(280, 87%, 65%);
+  --color-accent-blue: hsl(220, 98%, 61%);
+
+  --color-main-bg: var(--theme-color-main-bg);
+  --color-todo-bg: var(--theme-color-todo-bg);
+
+  --color-options: var(--theme-color-options);
+  --color-options-hover: var(--theme-color-options-hover);
+
+  --color-form-placeholder: var(--theme-color-form-placeholder);
+  --color-text-todo: var(--theme-color-text-todo);
+
+  --color-inactive: var(--theme-color-inactive);
+  --color-inactive-hover: var(--theme-color-inactive-hover);
+
+  --color-clear: var(--theme-color-clear);
+}
+
+@layer base {
+  html[data-theme="light"] {
+    --theme-color-main-bg: hsl(0, 0%, 98%);
+    --theme-color-todo-bg: hsl(0, 0%, 100%);
+
+    --theme-color-options: hsl(236, 33%, 92%);
+    --theme-color-options-hover: hsl(236, 33%, 92%);
+
+    --theme-color-text-todo: hsl(235, 19%, 35%);
+    --theme-color-form-placeholder: hsl(235, 19%, 35%);
+
+    --theme-color-inactive: hsl(233, 11%, 84%);
+    --theme-color-inactive-hover: hsl(235, 19%, 35%);
+
+    --theme-color-clear: hsl(236, 9%, 61%);
+  }
+
+  html[data-theme="dark"] {
+    --theme-color-main-bg: hsl(235, 21%, 11%);
+    --theme-color-todo-bg: hsl(235, 24%, 19%);
+
+    --theme-color-options: hsl(237, 14%, 26%);
+    --theme-color-options-hover: hsl(236, 33%, 92%);
+
+    --theme-color-text-todo: hsl(234, 39%, 85%);
+    --theme-color-form-placeholder: hsl(234, 39%, 85%);
+
+    --theme-color-inactive: hsl(234, 11%, 52%);
+    --theme-color-inactive-hover: hsl(236, 33%, 92%);
+
+    --theme-color-clear: hsl(233, 14%, 35%);
+  }
+}
